@@ -1,0 +1,46 @@
+React-Agile Track System
+Introduction to React-Agile Track System
+The React-Agile Track System is a web-based project management tool designed
+to streamline task tracking and team collaboration in agile environments.
+Level 0 DFD (Context Diagram)
+Entities:
+1. User (Employee) → Logs in, views assigned tasks, updates status.
+2. Admin → Manages users, tasks, and scrum teams.
+3. JSON Server (Database) → Stores users, tasks, and scrum details.
++--------------+ +----------------------+
+| User | --------> | React Agile System |
++--------------+ +----------------------+
+|
+V
++-----------------------+
+| JSON Server (DB) |
++------------------------+
+Level 1 DFD (Detailed View)
+Shows major processes in the system.
++--------------+ +----------------------+ +--------------------+
+| User | -----> | 1. User Authentication| -----> | JSON Server (DB) |
++--------------+ +----------------------+ +--------------------+
+| | Login Validation (Email & Password)
+| V
+| +---------------------------+
+| | 2. View & Manage Tasks | -----> Fetch User Tasks
+| +---------------------------+ Update Task Status
+| |
+| V
+| +---------------------------+
+| | 3. Scrum Team Management | -----> Fetch Scrums
+| +---------------------------+ Add New Scrum (Admin)
+| |
+| V
+| +---------------------------+
+| | 4. Profile Management | -----> Fetch User Details
+| +---------------------------+ Update Profile
+|
++--------------+ +----------------------+ +--------------------+
+| Admin | -----> | 5. Manage Users | -----> | JSON Server (DB) |
++--------------+ +----------------------+ +--------------------+
+|
+V
++---------------------------+
+| 6. View Reports & History |
++---------------------------+
